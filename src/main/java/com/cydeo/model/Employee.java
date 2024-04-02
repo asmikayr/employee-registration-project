@@ -1,6 +1,7 @@
 package com.cydeo.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 
 public class Employee {
     private String firstName,lastName, email, password, address, address2, city, state, zipcode;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
 
 }
